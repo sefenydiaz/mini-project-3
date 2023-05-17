@@ -5,8 +5,9 @@
 //we need to store all possible values
 //we need to store user selection
 //we need to store computer selection
-var items = ["R", "P", "S"]
-var userSelect = prompt("Let's play Rock, Paper, Scissors! Enter R, P, or S.")
+var items = ["R", "P", "S"];
+var gamePlay = true;
+var userChoice = prompt("Let's play Rock, Paper, Scissors! Enter R, P, or S.");
 var computerSelect = Math.floor(Math.random() * items.length);
 
 // FUNCTIONS
@@ -18,12 +19,30 @@ var computerSelect = Math.floor(Math.random() * items.length);
     //tell user what computer chose
 //display to the user if they won, lost, or tied
 //display stats
+    function getUserChoice() {
+        return "R"
+    }
     function startGame() {
-
-    }
-    function askWhat() {
-        userSelect;
-    }
+        var userChoice = getUserChoice();
+        console.log("User choice:", userChoice);
+    
+    input = prompt("Choose rock(R), paper(P), or scissors(S)");
+    if(input === "R"){
+        if(response === "S") {
+            alert("The computer chose S\nYou Win")
+            win = win + 1 
+        }else if(response === "R"){
+            alert("The computer chose R\nIt's a tie")
+            tie = tie + 1
+        }else{
+            alert("The computer chose P\nYou lose")
+            lose = lose + 1
+        }
+    alert("Ties: " + tie + " Wins: " + win + " losses: " + lose)
+    gamePlay = confirm("Would you like to play again?")
+        }
+        }
+    
 
     //Give them the option to play again
         // yes > start the game
